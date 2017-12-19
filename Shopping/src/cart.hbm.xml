@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+
+	<class name="pojo.Cart" table="cart">
+
+		<id name="cart_id">
+
+			<generator class="increment" />
+		</id>
+<property name="p_id"  column="p_id" insert="false" update="false"></property>
+		<many-to-one name="products" class="pojo.Product"
+			column="p_id" unique="true" not-null="true" cascade="all"></many-to-one>
+		<many-to-one name="users" class="pojo.User_Login"
+			column="u_id" unique="true" not-null="true" cascade="all"></many-to-one>
+		
+
+	</class>
+</hibernate-mapping>

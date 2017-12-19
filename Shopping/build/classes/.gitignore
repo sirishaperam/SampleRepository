@@ -1,0 +1,10 @@
+/action/
+/cart.hbm.xml
+/dao/
+/hibernate.cfg.xml
+/image.hbm.xml
+/pojo/
+/product.hbm.xml
+/struts.xml
+/userlogin.hbm.xml
+/vendor.hbm.xml

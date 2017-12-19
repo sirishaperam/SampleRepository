@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <include file="struts-default.xml"/>
+    <package name="a" extends="struts-default">
+
+        <action name="login" class="action.ShoppingAction" method="login" >
+        <result name="success">/index.jsp</result>
+      <result name="error">/login.jsp</result>
+        </action>
+        
+        <action name="cart" class="action.ShoppingAction" method="displayCart" >
+        <result name="success">/checkout.jsp</result>
+      <result name="error">/index.jsp</result>
+        </action>
+        
+        <action name="registervendor" class="action.Vendor_Action" method="register_vendor" >
+        <result name="success">/vendorhome.jsp</result>
+      <result name="error">/index.jsp</result>
+        </action>
+        
+        <action name="logout" class="action.ShoppingAction" method="logout" >
+        <result name="success">/index.jsp</result>
+      <result name="error">/login.jsp</result>
+        </action>
+        </package>
+        </struts>
