@@ -18,6 +18,7 @@ public class ShoppingAction extends ActionSupport implements SessionAware
 	Map<String,Object> session;
 	private List l;
 	private int noOfProductsAdded;
+
 	
 	public int getUid() {
 		return uid;
