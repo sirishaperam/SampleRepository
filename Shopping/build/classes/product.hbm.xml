@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+
+	<class name="pojo.Product" table="product_table">
+
+		<id name="product_id" column="p_id">
+
+			<generator class="increment" />
+		</id>
+
+		<property name="product_name" column="p_name"></property>
+		<property name="product_description" column="p_description"></property>
+		<property name="product_mrp" column="p_mrp"></property>
+		<property name="product_discount" column="p_discount"></property>
+		<property name="product_quantity" column="p_quantity"></property>
+		<property name="product_color" column="p_color"></property>
+		<many-to-one name="p_img_id" class="pojo.Image_pojo"
+			column="p_img_id" unique="true" not-null="true" cascade="all"></many-to-one>
+		
+
+	</class>
+</hibernate-mapping>
