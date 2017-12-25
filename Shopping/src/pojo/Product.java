@@ -10,6 +10,7 @@ public class Product
 	private int product_quantity;
 	private String product_color;
 	private Image_pojo p_img_id;
+	private String name;
 	
 	public int getProduct_id() {
 		return product_id;
